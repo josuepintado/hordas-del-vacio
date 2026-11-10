@@ -22,6 +22,6 @@
     "productName": "Hordas del Vacío",
     "directories": { "output": "dist" },
     "files": ["index.html", "css/**", "js/**", "electron/**", "assets/**"],
-    "win": { "target": "portable", "artifactName": "HordasDelVacio-${version}.exe" }
+    "win": { "target": "portable", "signAndEditExecutable": false,"artifactName": "HordasDelVacio-${version}.exe" }
   }
 }
