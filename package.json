@@ -1,0 +1,27 @@
+{
+  "name": "hordas-del-vacio",
+  "productName": "Hordas del Vacío",
+  "version": "0.1.0",
+  "description": "Juego de supervivencia por oleadas con jefes, mejoras y progreso permanente.",
+  "main": "electron/main.js",
+  "author": "josuepintado",
+  "license": "UNLICENSED",
+  "private": true,
+  "scripts": {
+    "web": "node tools/serve.js",
+    "start": "electron .",
+    "exe": "electron-builder --win portable",
+    "zip-web": "powershell -ExecutionPolicy Bypass -File tools/empaquetar-web.ps1"
+  },
+  "devDependencies": {
+    "electron": "^33.2.0",
+    "electron-builder": "^25.1.8"
+  },
+  "build": {
+    "appId": "io.github.josuepintado.hordasdelvacio",
+    "productName": "Hordas del Vacío",
+    "directories": { "output": "dist" },
+    "files": ["index.html", "css/**", "js/**", "electron/**", "assets/**"],
+    "win": { "target": "portable", "artifactName": "HordasDelVacio-${version}.exe" }
+  }
+}
